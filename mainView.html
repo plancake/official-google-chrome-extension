@@ -1,0 +1,51 @@
+<html>
+<head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <a href="http://www.plancake.com"><h1>Plancake</h1></a>
+    
+    <div id="content">
+        <form name="enterUserKey" id="enterUserKey" style="display: none">
+            Please enter your userKey:
+            <input type="text" name="userKey" id="userKeyValue" />
+            <input type="submit" value="send" class="button" />
+            <p>You can copy and paste your userKey from your Plancake Settings page</p>
+            <p>If you don't have a Plancake account, please create one for free <a href="http://www.plancake.com">here</a>.</p>
+        </form>
+
+        <form name="enterTask" id="enterTask" style="display: none">
+            Enter a task:
+            <input type="text" name="task" id="enterTaskValue" style="width: 270px;" value="" />
+            
+            <br /><br />
+            
+            <div style="width: 100%; position: relative;">
+                <select id="listsCombo" >
+                </select>
+                <img alt="reload lists" id="refreshListsCombo" src="images/reload_icon.png" />
+            </div>
+            <br />
+            <input type="submit" value="Add Task"  class="button" />
+            <br />
+        </form>       
+        
+        <div id="ajaxInProgress" style="display: none">&nbsp;</div>
+        <div id="successFeedback" style="display: none"></div>
+        <div id="errorFeedback" style="display: none"></div>
+        
+        <a title="reset local data" href="#" id="resetLink">reset data</a>
+        <a title="add the current page address as task" href="#" id="getUrlLink">get page address</a>         
+    </div>
+    
+            <script src="js/jquery.js"></script>          
+            <script src="js/jquery.cookie.js"></script>
+            <script src="js/jquery.blockUI.js"></script>        
+            <script src="js/json2.js"></script>          
+            <script src="js/Utils.js"></script>
+            <script src="js/PlancakeTask.js"></script>         
+            <script src="js/PlancakeApiClient.js"></script>
+            <script src="js/GoogleChromeExtension.js"></script>        
+            
+</body>
+</html>

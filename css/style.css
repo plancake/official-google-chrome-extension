@@ -1,0 +1,106 @@
+body {
+    width: 300px;
+    height: 200px;
+    background-color: #F5E6CE;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    display: block;
+    width: 100%;
+    color: #F92;
+    background-color: #FAC870;
+    border-bottom: 2px solid #F92;
+    padding: 5px;
+    padding-left: 75px;
+    background-image:url('images/logo.png');
+    background-repeat: no-repeat;
+    background-position: 20px 8px;
+}
+
+#content
+{
+    margin: 10px;
+    margin-bottom: 30px;
+    margin-top: 20px;    
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+select#listsCombo {
+    width: 250px;
+}
+
+.header {
+    margin: 2px;
+    background-color: #ff6633;
+}
+
+input {
+    width: 250px;
+    padding: 3px;
+    font-size: 13px;
+    border: 1px solid orange;
+}
+
+input.button
+{
+    width: 100px;
+}
+
+#refreshListsCombo {
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    right: 5px;    
+}
+
+#refreshListsCombo:hover {
+    cursor: pointer;   
+}
+
+#ajaxInProgress {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    z-index: 99;
+    background-image:url('images/ajax_loader_small.gif');
+    background-repeat: no-repeat;
+}
+
+#errorFeedback {
+    position: absolute;
+    top: -22px;
+    right: -10px;
+    z-index: 99;    
+    background-color: red;
+    color: white;
+    padding: 2px;
+}
+
+#successFeedback {
+    position: absolute;
+    top: -22px;
+    right: -10px;
+    z-index: 99;    
+    background-color: green;
+    color: white;
+    padding: 2px;
+}
+
+#resetLink {
+    position: absolute;
+    bottom: -30px;
+    right: 0px;
+}
+
+#getUrlLink {
+    position: absolute;
+    top: -5px;
+    right: 0px;    
+}
