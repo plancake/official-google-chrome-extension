@@ -1,5 +1,5 @@
 {
-  "name": "Plancake Tasks and Todo Extension for Chrome",
+  "name": "Plancake Tasks and Todo Extension",
   "version": "1.0",
   "description": "Plancake Extension for Google Chrome.",
   "browser_action": {
