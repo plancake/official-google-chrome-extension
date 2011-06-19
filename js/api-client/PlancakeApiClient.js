@@ -235,7 +235,7 @@ PLANCAKE.PlancakeApiClient = function (settings) {
         
         request.params = '';
         for (key in params) {
-            request.params += key + '=' + encodeURI(params[key]) + '&';
+            request.params += key + '=' + encodeURIComponent(params[key]) + '&';
         }
         request.params += 'sig=' + signature;
 
