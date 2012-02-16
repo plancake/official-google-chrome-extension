@@ -111,18 +111,23 @@ $(document).ready(function () {
         
         task.description = $('#enterTaskValue').val();
         task.listId = $('select#listsCombo').val();
+        task.note =  $('#enterTaskNote').val();
         
-        plancakeApiClient.addTask(task, {
-            success: function (dataFromServer) {
-                var taskId = dataFromServer.task_id;
-                if (taskId <= 0) {
-                    alert("Some error occurred."); 
-                } else {
-                    $('#enterTaskValue').val('');
-                    return;                
+        if (!task.description.length) {
+            alert("You need to add a description.");
+        } else {        
+            plancakeApiClient.addTask(task, {
+                success: function (dataFromServer) {
+                    var taskId = dataFromServer.task_id;
+                    if (taskId <= 0) {
+                        alert("Some error occurred."); 
+                    } else {
+                        $('#enterTaskValue').val('');
+                        return;                
+                    }
                 }
-            }
-        });
+            });
+        }
         return false;
     });   
     
@@ -136,7 +141,7 @@ $(document).ready(function () {
 
     $('#getUrlLink').click(function () {
         chrome.tabs.getSelected(null, function (tab) {
-            $('#enterTaskValue').val(tab.url);
+            $('#enterTaskNote').val(tab.url);
         });
     });
 });
