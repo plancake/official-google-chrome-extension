@@ -294,7 +294,7 @@ PLANCAKE.PlancakeApiClient = function (settings) {
                     }
                 }
 
-                this.token = response.token;                  
+                this.token = response.token;            
             }, this)
         });
     };
@@ -341,7 +341,7 @@ PLANCAKE.PlancakeApiClient = function (settings) {
                     // if the error is an INVALID_TOKEN_ERROR, we try to get the token again
                     // (maybe it was just expired)
                     if (parseInt(response.error) == INVALID_TOKEN_ERROR) {
-                        resetToken.call(this);                       
+                        resetToken.call(this);
                         request = prepareRequest.call(this, params, methodName);
 
                         $.ajax({

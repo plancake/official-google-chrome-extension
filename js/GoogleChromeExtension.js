@@ -26,8 +26,8 @@ var PLANCAKE = PLANCAKE || {};
 var PLANCAKE_CHROME_EXTENSION = {};
 PLANCAKE_CHROME_EXTENSION.plancakeApiClient = null; // this properties is for implementing a Singleton
 
-PLANCAKE_CHROME_EXTENSION.apiKey = 'efe21c2f0e034b0c76c7cf6be60b0842f280ee8c'; // obtain an API key from http://www.plancake.com/api-documentation
-PLANCAKE_CHROME_EXTENSION.apiSecret = 'g4q82y4UxhYP69Ss'; // obtain an API secret from http://www.plancake.com/api-documentation
+PLANCAKE_CHROME_EXTENSION.apiKey = ''; // obtain an API key from http://www.plancake.com/api-documentation
+PLANCAKE_CHROME_EXTENSION.apiSecret = ''; // obtain an API secret from http://www.plancake.com/api-documentation
 PLANCAKE_CHROME_EXTENSION.apiEndpointUrl = 'http://api.plancake.com/api.php';
 
 
@@ -123,6 +123,7 @@ $(document).ready(function () {
                         alert("Some error occurred."); 
                     } else {
                         $('#enterTaskValue').val('');
+                        $('#enterTaskNote').val('');
                         return;                
                     }
                 }
